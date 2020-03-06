@@ -3,8 +3,10 @@ require 'sinatra/base'
 class Battle < Sinatra::Base
   get '/' do
     'Hello Battle!'
-    'Testing infrastructure working!'
     erb :index
+  end
+  get '/test' do
+    'Testing infrastructure working!'
   end
   post '/names' do
     @player_1_name = params[:player_1_name]
